@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   # PUBLIC ROUTES
   # ----------------------------------------------------------------------------
   post 'search' => 'licences#search', as: 'search_licences'
+  resources :payments, only: [:new, :create]
+
   root 'licences#renew'
 
 end

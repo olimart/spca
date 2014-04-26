@@ -6,6 +6,8 @@ puts 'creating sample data...'
 	Animal.create!(
     name: Faker::Name.first_name,
     licence: "000#{u}",
-    animal_type: ['cat', 'mouse', 'sheep', 'pig', 'rooster', 'tweetbird', 'penguin'].sample
+    licence_amount: [15, 30, 45, 50].sample,
+    animal_type: ['cat', 'mouse', 'sheep', 'pig', 'rooster', 'tweetbird', 'penguin'].sample,
+    owner: [Faker::Name.first_name, Faker::Name.last_name].join(" ")
 	)
 end

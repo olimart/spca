@@ -14,4 +14,11 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-config/database.ymlpublic/assets/.rvmrc/public/cache/public/system/*.DS_Store**/.DS_Storeconfig/application.yml
+config/database.yml
+public/assets/
+.rvmrc
+/public/cache
+/public/system/
+*.DS_Store
+**/.DS_Store
+config/application.yml

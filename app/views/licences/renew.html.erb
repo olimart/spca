@@ -4,7 +4,7 @@
 
   <%= form_tag(search_licences_path, method: :post, remote: true, id: 'search-license-form') do %>
     <div class="form-group">
-      <%= text_field_tag(:q, '0001', class: 'form-control', placeholder: '123456') %>
+      <%= text_field_tag(:q, '', class: 'form-control', placeholder: '0001 à 000100') %>
     </div>
     <%= submit_tag('Chercher', class: 'btn btn-primary btn-block') %>
   <% end %>

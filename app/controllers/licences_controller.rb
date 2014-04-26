@@ -11,7 +11,7 @@ class LicencesController < ApplicationController
 
   		respond_to do |format|
         format.html
-        format.js { render layout: false }
+        format.js {  }
       end
     end
   end
