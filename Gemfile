@@ -45,9 +45,9 @@ gem 'thin'
 gem 'figaro', '~> 1.0.0.rc1', github: 'laserlemon/figaro'
 gem 'stripe'
 # gem 'compass-rails', '~> 2.0.0.pre', github: 'Compass/compass-rails'
+gem 'faker', '1.0.1'
 
 group :development, :test do
-  gem 'faker', '1.0.1'
   gem 'hirb'
 end
 
