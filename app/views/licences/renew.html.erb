@@ -1,0 +1,13 @@
+<div class="well" id="search-license-intro">
+  <h1>Renouvellement de licence</h1>
+  <p>Veuillez entrer la licence de votre animal pour commencer</p>
+
+  <%= form_tag(search_licences_path, method: :post, remote: true, id: 'search-license-form') do %>
+    <div class="form-group">
+      <%= text_field_tag(:q, '0001', class: 'form-control', placeholder: '123456') %>
+    </div>
+    <%= submit_tag('Chercher', class: 'btn btn-primary btn-block') %>
+  <% end %>
+
+  <div id='licences-search-results'></div>
+</div>

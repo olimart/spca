@@ -1,0 +1,5 @@
+<% if @animal.present? %>
+  $("#licences-search-results").html($("<%= j(render('licences/animal')) %>"));
+<% else %>
+  $("#licences-search-results").html($("<p class='alert alert-danger'>Aucun animal trouvé.</p>"));
+<% end %>

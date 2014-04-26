@@ -1,0 +1,39 @@
+<div class="media">
+  <a class="pull-left" href="#">
+    <%= image_tag("animal/#{@animal.animal_type}.png", class: 'media-object', size: '96x96') %>
+  </a>
+  <div class="media-body">
+    <h4 class="media-heading"><%= @animal.name %>
+      <span class='pull-right'><%= link_to "Renouveler", "#", class: 'btn btn-default', id: 'toggle-payment-form' %></span>
+    </h4>
+    <p>Coût de la licence: <strong><%= number_to_currency('15', strip_insignificant_zeros: true) %></strong></p>
+    <p>Propriétaire: <strong>M. Jean Duc</strong></p>
+  </div>
+</div>
+
+<div id="new_payment_form" class="form-horizontal">
+	<div class="row form-group">
+    <div class="col-md-9">
+    	<%= text_field_tag :card_number, nil, name: nil, class: 'form-control', placeholder: 'Credit Card Number' %>
+    </div>
+    <div class="col-md-3">
+    	<%= text_field_tag :card_code, nil, name: nil, class: 'form-control', placeholder: 'CVV' %>
+    </div>
+	</div>
+	<div class="row form-group">
+		<div class="col-md-9">
+    	<%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month", class: "form-control"} %>
+    </div>
+    <div class="col-md-3">
+    	<%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year", class: "form-control"} %>
+    </div>
+	</div>
+	<%= link_to "Payer ($15)", "#", class: 'btn btn-success btn-block', id: 'submit-payment' %>
+	<div id="stripe_error">
+	  <noscript><p class="text-danger">JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript></p>
+	</div>
+</div>
+
+<div class="alert alert-success" id="payment-confirmation" style="display:none;">
+  Merci pour votre paiement. Vous allez recevoir sous peu une confirmation par courriel.
+</div>

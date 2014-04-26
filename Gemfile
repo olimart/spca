@@ -39,13 +39,16 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 ruby '2.0.0'
+
+gem "sorcery", "~> 0.8.5"
 gem "simple_form", "~> 3.0.1"
 gem "nested_form"
-gem "rails_bootstrap_helper", "~> 1.0.1", github: "olimart/rails_bootstrap_helper", branch: "bs3.1"
+# gem "rails_bootstrap_helper", "~> 1.0.1", github: "olimart/rails_bootstrap_helper", branch: "bs3.1"
 gem "tabs_on_rails", "~> 2.1.1"
 gem "thin"
-gem "figaro", "~> 1.0.0.rc1", github: "laserlemon/figaro"
-gem "compass-rails", "~> 2.0.0.pre", github: "Compass/compass-rails"
+# gem "figaro", "~> 1.0.0.rc1", github: "laserlemon/figaro"
+# gem "compass-rails", "~> 2.0.0.pre", github: "Compass/compass-rails"
+
 group :development, :test do
   gem "faker", "1.0.1"
   gem "hirb"
@@ -61,5 +64,3 @@ group :production do
   gem "exception_notification", "~> 4.0.0"
   gem "unicorn"
 end
-
-gem "sorcery", "~> 0.8.5"
